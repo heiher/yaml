@@ -18,7 +18,7 @@ STATIC_TARGET=$(BINDIR)/lib$(PROJECT).a
 SHARED_TARGET=$(BINDIR)/lib$(PROJECT).so
 
 $(SHARED_TARGET) : CCFLAGS+=-fPIC
-$(SHARED_TARGET) : LDFLAGS+=-shared -pthread
+$(SHARED_TARGET) : LDFLAGS+=-shared
 
 -include build.mk
 -include configs.mk
