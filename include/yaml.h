@@ -28,7 +28,7 @@ extern "C" {
 
 #if defined(__MINGW32__)
 #   define  YAML_DECLARE(type)  type
-#elif defined(WIN32)
+#elif defined(WIN32) || (defined(_WIN32) && !defined(__CYGWIN__))
 #   if defined(YAML_DECLARE_STATIC)
 #       define  YAML_DECLARE(type)  type
 #   elif defined(YAML_DECLARE_EXPORT)
