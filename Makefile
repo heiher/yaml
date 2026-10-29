@@ -25,7 +25,7 @@ $(SHARED_TARGET) : LDFLAGS+=-shared
 
 -include build.mk
 -include configs.mk
-CCFLAGS+=-I$(SRCDIR) $(CONFIG_CFLAGS)
+CCFLAGS+=-I$(SRCDIR) -Iinclude $(CONFIG_CFLAGS)
 
 CCSRCS=$(filter %.c,$(SRCFILES))
 ASSRCS=$(filter %.S,$(SRCFILES))
